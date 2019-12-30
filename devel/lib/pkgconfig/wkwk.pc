@@ -1,0 +1,8 @@
+prefix=/home/mfikih15/trouble_maker/devel
+
+Name: wkwk
+Description: Description of wkwk
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mfikih15/trouble_maker/devel/lib 
+Requires: 
