@@ -8,4 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/mfikih15/trouble_maker/devel:/home/mfikih15/freeflyer_build/native/devel:/opt/ros/kinetic:/home/mfikih15/freeflyer/cmake"
+export PKG_CONFIG_PATH="/home/mfikih15/trouble_maker/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/mfikih15/trouble_maker/build"
+export PYTHONPATH="/home/mfikih15/trouble_maker/devel/lib/python2.7/dist-packages:$PYTHONPATH"
