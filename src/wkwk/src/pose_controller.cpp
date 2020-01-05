@@ -1,7 +1,3 @@
-//make reset button
-//make start button
-//make sequential program per QR
-
 //hw/cam_nav
 //hw/cam_dock
 
@@ -59,13 +55,38 @@ int main(int argc, char **argv){
 
 	namedWindow("panel", CV_WINDOW_AUTOSIZE);
 	
-	while (ros::ok()) {
-		ros::spinOnce();
-		imageProcessing(nav_image, dock_image);		
-	}
+	ros::spinOnce();
+	
+	//imageProcessing(nav_image, dock_image);
+	//get position for next mission		
+	//string command = "rosrun executive teleop_tool -move -relative -pos "1 2 0.5"";
+	//system(command.c_str());
+	//if pose same, try again
+	
+	//start dock
+	ROS_WARN("start dock");
+	//go to p1-1
+	ROS_WARN("go to p1-1");
+	//go to p1-2
+	ROS_WARN("go to p1-2");
+	//go to p1-3
+	ROS_WARN("go to p1-3");
+	//go to p2-1
+	ROS_WARN("go to p2-1");
+	//go to p2-2
+	ROS_WARN("go to p2-2");
+	//go to p2-3
+	ROS_WARN("go to p2-3");
+	//go to p3
+	ROS_WARN("go to p3");
+	//go to p3+0
+	ROS_WARN("go to p3+0");
+	//go to target
+	ROS_WARN("go to target");
 }
 
-void imageProcessing(Mat input_nav_image, Mat input_dock_image){	
+void imageProcessing(Mat input_nav_image, Mat input_dock_image){
+	//scan qr code in here	
 	imshow("nav_image", input_nav_image);
 	imshow("dock_image", input_dock_image);
 }
