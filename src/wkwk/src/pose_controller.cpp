@@ -16,24 +16,17 @@
 using namespace std;
 using namespace cv;
 
-int width = 640;
-int height = 200;
-int x_init=0;
-int y_init=180;
-int Noise 	= 15;
-
-void imageProcessing(Mat input_image);
+void imageProcessing(Mat input_nav_image, Mat input_dock_image);
 
 Mat nav_image;
 Mat dock_image;
 
-void navCallback(const sensor_msgs::CompressedImageConstPtr& msg)
+void navCallback(const sensor_msgs::ImageConstPtr& msg)
 {
   try
   {
-    nav_image = cv::imdecode(cv::Mat(msg->data),1);//convert compressed image data to cv::Mat
-    waitKey(10);
-    imageProcessing(nav_image);
+	nav_image = cv_bridge::toCvShare(msg, "bgr8")->image;
+	waitKey(10);
   }
   catch (cv_bridge::Exception& e)
   {
@@ -41,12 +34,11 @@ void navCallback(const sensor_msgs::CompressedImageConstPtr& msg)
   }
 }
 
-/*
-void dockCallback(const sensor_msgs::CompressedImageConstPtr& msg)
+void dockCallback(const sensor_msgs::ImageConstPtr& msg)
 {
   try
   {
-    dock_image = cv::imdecode(cv::Mat(msg->data),1);//convert compressed image data to cv::Mat
+    dock_image = cv_bridge::toCvShare(msg, "bgr8")->image;
     waitKey(10);
   }
   catch (cv_bridge::Exception& e)
@@ -54,7 +46,6 @@ void dockCallback(const sensor_msgs::CompressedImageConstPtr& msg)
     ROS_ERROR("Could not convert to image!");
   }
 }
-*/
 
 int main(int argc, char **argv){
 	ros::init(argc, argv, "pose");
@@ -63,36 +54,18 @@ int main(int argc, char **argv){
 	
 	image_transport::ImageTransport it(nh);
 	
-	ros::Subscriber sub_nav 	= nh.subscribe("/hw/cam_nav", 1, navCallback);
-	//ros::Subscriber sub_dock 	= nh.subscribe("/hw/cam_dock", 1, dockCallback);
+	ros::Subscriber sub_nav 	= nh.subscribe("/hw/cam_nav", 8, navCallback);
+	ros::Subscriber sub_dock 	= nh.subscribe("/hw/cam_dock",8, dockCallback);
 
 	namedWindow("panel", CV_WINDOW_AUTOSIZE);
 	
-	createTrackbar("x", "panel", &x_init, 700); //Hue (0 - 255)
-	createTrackbar("y", "panel", &y_init, 700);
-	createTrackbar("width", "panel", &width, 700); //Saturation (0 - 255)
-	createTrackbar("hight", "panel", &height, 700);
-	createTrackbar("noise", "panel", &Noise, 255);
-	
 	while (ros::ok()) {
 		ros::spinOnce();
-		//imageProcessing(dock_image);
+		imageProcessing(nav_image, dock_image);		
 	}
 }
 
-void imageProcessing(Mat input_image){
-	/*
-	Rect region_of_interest = Rect(x_init, y_init, width, height);
-	Mat Original = input_image(region_of_interest);
-	
-	Size sz = Original.size();
-	int original_height = sz.height; 
-	int original_width	= sz.width;
-		
-	line( input_image, Point( x_init, y_init ), Point( x_init+original_width, y_init), Scalar( 100, 100, 100 ), 2, 8 );
-	line( input_image, Point( x_init, y_init+original_height ), Point( x_init+original_width, y_init+original_height), Scalar( 100, 100, 100 ), 2, 8 );	
-	line( input_image, Point( x_init, y_init ), Point( x_init, y_init+original_height), Scalar( 100, 100, 100 ), 2, 8 );
-	line( input_image, Point( x_init+original_width, y_init ), Point( x_init+original_width, y_init+original_height), Scalar( 100, 100, 100 ), 2, 8 );
-	*/
-	imshow("Input_QR", input_image);
+void imageProcessing(Mat input_nav_image, Mat input_dock_image){	
+	imshow("nav_image", input_nav_image);
+	imshow("dock_image", input_dock_image);
 }
