@@ -67,6 +67,7 @@ int main(int argc, char **argv){
 	ROS_WARN("start dock");
 	//go to p1-1
 	ROS_WARN("go to p1-1");
+	//system("rosrun executive teleop_tool -move -relative -pos \"1 2 0.5\"");
 	//go to p1-2
 	ROS_WARN("go to p1-2");
 	//go to p1-3
