@@ -712,6 +712,19 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named image_front
+
+# Build rule for target.
+image_front: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 image_front
+.PHONY : image_front
+
+# fast build rule for target.
+image_front/fast:
+	$(MAKE) -f wkwk/CMakeFiles/image_front.dir/build.make wkwk/CMakeFiles/image_front.dir/build
+.PHONY : image_front/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_eus
 
 # Build rule for target.
@@ -818,6 +831,7 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... image_front"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_lisp"

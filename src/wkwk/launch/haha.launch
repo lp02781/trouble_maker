@@ -1,0 +1,4 @@
+<launch>
+	<node name="image_front" pkg="wkwk" output="screen" type="image_front" />
+	<node name="ros_qr_code" pkg="wkwk" output="screen" type="ros_qr_code" />
+</launch>

@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
   if(argc>1)
     inputImage = imread(argv[1]);
   else
-    inputImage = imread("qrcode-learnopencv.jpg");
+    inputImage = imread("~/qrcode-learnopencv.jpg");
  
   QRCodeDetector qrDecoder = QRCodeDetector::QRCodeDetector();
  

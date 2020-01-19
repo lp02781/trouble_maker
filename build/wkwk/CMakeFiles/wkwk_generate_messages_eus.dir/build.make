@@ -58,7 +58,7 @@ wkwk/CMakeFiles/wkwk_generate_messages_eus: /home/mfikih15/trouble_maker/devel/s
 
 /home/mfikih15/trouble_maker/devel/share/roseus/ros/wkwk/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mfikih15/trouble_maker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp manifest code for wkwk"
-	cd /home/mfikih15/trouble_maker/build/wkwk && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/mfikih15/trouble_maker/devel/share/roseus/ros/wkwk wkwk std_msgs sensor_msgs
+	cd /home/mfikih15/trouble_maker/build/wkwk && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/mfikih15/trouble_maker/devel/share/roseus/ros/wkwk wkwk std_msgs sensor_msgs
 
 wkwk_generate_messages_eus: wkwk/CMakeFiles/wkwk_generate_messages_eus
 wkwk_generate_messages_eus: /home/mfikih15/trouble_maker/devel/share/roseus/ros/wkwk/manifest.l

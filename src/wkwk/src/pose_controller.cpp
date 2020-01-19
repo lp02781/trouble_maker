@@ -23,6 +23,7 @@ void navCallback(const sensor_msgs::ImageConstPtr& msg)
   {
 	nav_image = cv_bridge::toCvShare(msg, "bgr8")->image;
 	waitKey(10);
+	
   }
   catch (cv_bridge::Exception& e)
   {
@@ -54,15 +55,17 @@ int main(int argc, char **argv){
 	ros::Subscriber sub_dock 	= nh.subscribe("/hw/cam_dock",8, dockCallback);
 
 	namedWindow("panel", CV_WINDOW_AUTOSIZE);
-	
+	/*
+	while (ros::ok()) {
+		ros::spinOnce();
+		
+	}
+	*/
 	ros::spinOnce();
+	imageProcessing(nav_image, dock_image);
 	
-	//imageProcessing(nav_image, dock_image);
-	//get position for next mission		
-	//string command = "rosrun executive teleop_tool -move -relative -pos "1 2 0.5"";
-	//system(command.c_str());
-	//if pose same, try again
 	
+	/*
 	//start dock
 	ROS_WARN("start dock");
 	//go to p1-1
@@ -84,6 +87,7 @@ int main(int argc, char **argv){
 	ROS_WARN("go to p3+0");
 	//go to target
 	ROS_WARN("go to target");
+	*/
 }
 
 void imageProcessing(Mat input_nav_image, Mat input_dock_image){

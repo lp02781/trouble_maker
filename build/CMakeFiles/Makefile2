@@ -392,6 +392,7 @@ clean: gtest/gtest/CMakeFiles/gtest_main.dir/clean
 # Convenience name for "all" pass in the directory.
 wkwk/all: wkwk/CMakeFiles/wkwk_generate_messages.dir/all
 wkwk/all: wkwk/CMakeFiles/pose_controller.dir/all
+wkwk/all: wkwk/CMakeFiles/image_front.dir/all
 
 .PHONY : wkwk/all
 
@@ -429,6 +430,7 @@ wkwk/clean: wkwk/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 wkwk/clean: wkwk/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 wkwk/clean: wkwk/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 wkwk/clean: wkwk/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+wkwk/clean: wkwk/CMakeFiles/image_front.dir/clean
 wkwk/clean: wkwk/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 wkwk/clean: wkwk/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 wkwk/clean: wkwk/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
@@ -1006,7 +1008,7 @@ wkwk/CMakeFiles/wkwk_generate_messages_eus.dir/all: wkwk/CMakeFiles/sensor_msgs_
 wkwk/CMakeFiles/wkwk_generate_messages_eus.dir/all: wkwk/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f wkwk/CMakeFiles/wkwk_generate_messages_eus.dir/build.make wkwk/CMakeFiles/wkwk_generate_messages_eus.dir/depend
 	$(MAKE) -f wkwk/CMakeFiles/wkwk_generate_messages_eus.dir/build.make wkwk/CMakeFiles/wkwk_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mfikih15/trouble_maker/build/CMakeFiles --progress-num=14 "Built target wkwk_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mfikih15/trouble_maker/build/CMakeFiles --progress-num=16 "Built target wkwk_generate_messages_eus"
 .PHONY : wkwk/CMakeFiles/wkwk_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1134,7 +1136,7 @@ clean: wkwk/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 wkwk/CMakeFiles/pose_controller.dir/all:
 	$(MAKE) -f wkwk/CMakeFiles/pose_controller.dir/build.make wkwk/CMakeFiles/pose_controller.dir/depend
 	$(MAKE) -f wkwk/CMakeFiles/pose_controller.dir/build.make wkwk/CMakeFiles/pose_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mfikih15/trouble_maker/build/CMakeFiles --progress-num=12,13 "Built target pose_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mfikih15/trouble_maker/build/CMakeFiles --progress-num=14,15 "Built target pose_controller"
 .PHONY : wkwk/CMakeFiles/pose_controller.dir/all
 
 # Include target in all.
@@ -1513,6 +1515,43 @@ wkwk/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
 
 # clean rule for target.
 clean: wkwk/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target wkwk/CMakeFiles/image_front.dir
+
+# All Build rule for target.
+wkwk/CMakeFiles/image_front.dir/all:
+	$(MAKE) -f wkwk/CMakeFiles/image_front.dir/build.make wkwk/CMakeFiles/image_front.dir/depend
+	$(MAKE) -f wkwk/CMakeFiles/image_front.dir/build.make wkwk/CMakeFiles/image_front.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mfikih15/trouble_maker/build/CMakeFiles --progress-num=12,13 "Built target image_front"
+.PHONY : wkwk/CMakeFiles/image_front.dir/all
+
+# Include target in all.
+all: wkwk/CMakeFiles/image_front.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+wkwk/CMakeFiles/image_front.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mfikih15/trouble_maker/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 wkwk/CMakeFiles/image_front.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mfikih15/trouble_maker/build/CMakeFiles 0
+.PHONY : wkwk/CMakeFiles/image_front.dir/rule
+
+# Convenience name for target.
+image_front: wkwk/CMakeFiles/image_front.dir/rule
+
+.PHONY : image_front
+
+# clean rule for target.
+wkwk/CMakeFiles/image_front.dir/clean:
+	$(MAKE) -f wkwk/CMakeFiles/image_front.dir/build.make wkwk/CMakeFiles/image_front.dir/clean
+.PHONY : wkwk/CMakeFiles/image_front.dir/clean
+
+# clean rule for target.
+clean: wkwk/CMakeFiles/image_front.dir/clean
 
 .PHONY : clean
 

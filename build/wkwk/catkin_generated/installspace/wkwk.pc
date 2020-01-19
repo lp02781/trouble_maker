@@ -4,5 +4,5 @@ Name: wkwk
 Description: Description of wkwk
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/mfikih15/trouble_maker/install/lib 
+Libs: -L${prefix}/lib 
 Requires: message_runtime

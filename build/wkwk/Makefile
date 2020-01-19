@@ -661,6 +661,21 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
+wkwk/CMakeFiles/image_front.dir/rule:
+	cd /home/mfikih15/trouble_maker/build && $(MAKE) -f CMakeFiles/Makefile2 wkwk/CMakeFiles/image_front.dir/rule
+.PHONY : wkwk/CMakeFiles/image_front.dir/rule
+
+# Convenience name for target.
+image_front: wkwk/CMakeFiles/image_front.dir/rule
+
+.PHONY : image_front
+
+# fast build rule for target.
+image_front/fast:
+	cd /home/mfikih15/trouble_maker/build && $(MAKE) -f wkwk/CMakeFiles/image_front.dir/build.make wkwk/CMakeFiles/image_front.dir/build
+.PHONY : image_front/fast
+
+# Convenience name for target.
 wkwk/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
 	cd /home/mfikih15/trouble_maker/build && $(MAKE) -f CMakeFiles/Makefile2 wkwk/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : wkwk/CMakeFiles/roscpp_generate_messages_eus.dir/rule
@@ -719,6 +734,33 @@ roscpp_generate_messages_nodejs: wkwk/CMakeFiles/roscpp_generate_messages_nodejs
 roscpp_generate_messages_nodejs/fast:
 	cd /home/mfikih15/trouble_maker/build && $(MAKE) -f wkwk/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make wkwk/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
+
+src/image_front.o: src/image_front.cpp.o
+
+.PHONY : src/image_front.o
+
+# target to build an object file
+src/image_front.cpp.o:
+	cd /home/mfikih15/trouble_maker/build && $(MAKE) -f wkwk/CMakeFiles/image_front.dir/build.make wkwk/CMakeFiles/image_front.dir/src/image_front.cpp.o
+.PHONY : src/image_front.cpp.o
+
+src/image_front.i: src/image_front.cpp.i
+
+.PHONY : src/image_front.i
+
+# target to preprocess a source file
+src/image_front.cpp.i:
+	cd /home/mfikih15/trouble_maker/build && $(MAKE) -f wkwk/CMakeFiles/image_front.dir/build.make wkwk/CMakeFiles/image_front.dir/src/image_front.cpp.i
+.PHONY : src/image_front.cpp.i
+
+src/image_front.s: src/image_front.cpp.s
+
+.PHONY : src/image_front.s
+
+# target to generate assembly for a file
+src/image_front.cpp.s:
+	cd /home/mfikih15/trouble_maker/build && $(MAKE) -f wkwk/CMakeFiles/image_front.dir/build.make wkwk/CMakeFiles/image_front.dir/src/image_front.cpp.s
+.PHONY : src/image_front.cpp.s
 
 src/pose_controller.o: src/pose_controller.cpp.o
 
@@ -793,10 +835,14 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... image_front"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... src/image_front.o"
+	@echo "... src/image_front.i"
+	@echo "... src/image_front.s"
 	@echo "... src/pose_controller.o"
 	@echo "... src/pose_controller.i"
 	@echo "... src/pose_controller.s"

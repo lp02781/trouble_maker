@@ -6,15 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/mfikih15/trouble_maker/src/wkwk/include/wkwk/haha.hpp
-iostream
--
-stdio.h
--
-
 /home/mfikih15/trouble_maker/src/wkwk/src/image_front.cpp
-../include/wkwk/haha.hpp
-/home/mfikih15/trouble_maker/src/wkwk/include/wkwk/haha.hpp
 ros/ros.h
 -
 image_transport/image_transport.h
