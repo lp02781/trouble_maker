@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
   else
     inputImage = imread("~/qrcode-learnopencv.jpg");
  
-  QRCodeDetector qrDecoder = QRCodeDetector::QRCodeDetector();
+  QRCodeDetector qrDecoder;
  
   Mat bbox, rectifiedImage;
  
